@@ -10,9 +10,9 @@ const clientPath = `${__dirname}/../client`;
 require('dotenv').config();
 // env PORT
 const { PORT } = process.env;
-const os = require('os');
-const localNetwork = os.networkInterfaces();
-const localOSIP = localNetwork.en0.pop().address;
+// const os = require('os');
+// const localNetwork = os.networkInterfaces();
+// const localOSIP = localNetwork.en0.pop().address;
 const log = console.log;
 
 // middleware
@@ -118,8 +118,7 @@ server.listen(PORT, () => {
   log(
     chalk.blue(
       `------------------------------------------------
-Game starter, running at http://localhost:${PORT} , 
-To connect through a device on the wifi network: http://${localOSIP}:${PORT}
+Game starter, running on port:${PORT} 
 ------------------------------------------------`
     )
   );

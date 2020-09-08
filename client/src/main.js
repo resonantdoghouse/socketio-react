@@ -4,9 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import Player from './components/Player';
-import { Synth } from 'tone';
+// import { Synth } from 'tone';
 
-const synth = new Synth().toDestination();
+// const synth = new Synth().toDestination();
 
 class App extends React.Component {
   state = {
@@ -46,9 +46,9 @@ class App extends React.Component {
     });
     // play audio connected to like btn
     socket.on('makeNoise', (note) => {
-      // console.log('makeNoise', note);
+      console.log('makeNoise', note);
       //play a middle 'C' for the duration of an 8th note
-      synth.triggerAttackRelease(`${note}3`, '8n');
+      // synth.triggerAttackRelease(`${note}3`, '8n');
     });
   }
 

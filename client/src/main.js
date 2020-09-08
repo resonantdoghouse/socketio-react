@@ -4,9 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import Player from './components/Player';
-import Tone from 'tone';
+import { Synth } from 'tone';
 
-const synth = new Tone.Synth().toDestination();
+const synth = new Synth().toDestination();
 
 class App extends React.Component {
   state = {
